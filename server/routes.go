@@ -2,6 +2,9 @@ package server
 
 import (
 	"mooi/library/middleware"
+	cartHandlers "mooi/src/cart/handlers"
+	cartRepositories "mooi/src/cart/repositories"
+	cartServices "mooi/src/cart/services"
 	customerHandlers "mooi/src/customer/handlers"
 	customerRepositories "mooi/src/customer/repositories"
 	customerServices "mooi/src/customer/services"
@@ -40,7 +43,15 @@ func (s *Server) routes() {
 	s.Router.HandleFunc("/products/{id}", productHandler.UpdateProduct).Methods("PUT")
 	s.Router.HandleFunc("/products/{id}", productHandler.DeleteProduct).Methods("DELETE")
 
-	
+	// Initialize cart repository
+	cartRepository := cartRepositories.NewCartRepository(s.Database)
+	// Initialize cart service with the repository
+	cartService := cartServices.NewCartService(cartRepository)
+	// Initialize cart handlers with the service
+	cartHandler := cartHandlers.NewCartHandler(cartService)
+
+	// Define cart routes
+	s.Router.HandleFunc("/carts/{customer_id}", cartHandler.GetCustomerCart).Methods("GET")
+	s.Router.HandleFunc("/carts/{customer_id}/items/{product_id}", cartHandler.AddCartItem).Methods("POST")
+	s.Router.HandleFunc("/carts/{customer_id}/items/{cart_item_id}", cartHandler.RemoveCartItem).Methods("DELETE")
 }
-
-
