@@ -7,7 +7,7 @@ import (
 )
 
 // JWTSecret is the secret key used to sign JWT tokens
-var JWTSecret = []byte("your_secret_key_here")
+var JWTSecret = []byte("asdjaskdasjkdkjqwnejk")
 
 // GenerateJWTToken generates a JWT token for the given customer ID
 func GenerateJWTToken(customerID string) (string, error) {
