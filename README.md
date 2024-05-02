@@ -42,10 +42,11 @@ To get started with Go-Commerce, follow these steps:
 3. Configure your environment variables:
 
 ```plaintext
-APP_PORT=6000
-DB_HOST=ep-lingering-resonance-a1749ljv.ap-southeast-1.aws.neon.tech
-DB_NAME=mooi
-DB_USERNAME=mooi_owner
-DB_PASSWORD=LJADBRjX3Yu4
-JWT_SECRET=LJADBRjX3Yu4asdaw312nj1d9wh10sla273A
+APP_PORT=<Port number your application will listen on>
+DB_HOST=<Host address of your database server>
+DB_NAME=<Name of your database>
+DB_USERNAME=<Username used to connect to the database>
+DB_PASSWORD=<Password used to authenticate with the database>
+JWT_SECRET=<Secret key used for JSON Web Token (JWT) encryption>
+
 ```
