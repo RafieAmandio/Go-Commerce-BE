@@ -1,71 +1,49 @@
-# go-starter
+# Go-Commerce 🛒
 
-Go base project using [gorilla/mux](https://github.com/gorilla/mux) request router and inspired from the Clean code Architecture.
+Go-Commerce is a simple backend solution for commerce operations, designed to empower businesses with a lightweight and efficient system. It provides endpoints for managing products, customers, carts, and orders, along with an Entity-Relationship Diagram (ERD) to guide the database design.
 
+## Entity-Relationship Diagram (ERD) 📊
 
-## Folder Structure
+```plaintext
+| Entity       | Attributes                              |
+|--------------|-----------------------------------------|
+| Product      | product_id, name, category, price, quantity |
+| Customer     | customer_id, username, email, password (hashed), created_at, updated_at |
+| Cart         | cart_id, customer_id, created_at, updated_at |
+| CartItem     | cart_item_id, cart_id, product_id, quantity, created_at, updated_at |
+| Order        | order_id, customer_id, total_amount, created_at, updated_at |
+| OrderItem    | order_item_id, order_id, product_id, quantity, created_at, updated_at |
 
-here how golang-started manage directory:
-```
-|-- config
-|-- library
-|   |-- middleware
-|   |-- response
-|   |-- logger
-|-- server
-|-- src
-|   |-- Model
-|   |-- Dto
-|   |-- Handler
-|   |-- Service
-|   |-- Repository
-|-- storage
-|   |-- database
-```
+## Endpoints 🚀
 
-all global setting will place in library folder.
-all module will place in src.
-
-# Config
-Config modules for the app
-
-# library
-library with their folders are using for the whole apps that will be needed to be a global function that will call in other modules. example:
-
-we have a example modules with their controller, repo, service, in the service we need a jwt for verification the jwt token. the jwt token function will be a callable function on other moduless, hence the jwt must be a global function
-
-# Server
-Server will have server config and method releated to server like start and shutdown server and routes 
-
-# src
-This boilerplate based on modules. eg: example modules, user modules, product modules etc. and the modules have their structure based on clean architecture. controllers, models, repositories, services. the flow is handler -> service -> repository.
-
-## models
-models is a struct to store any objects from database, example you have a message in your tables. then you must create your messages.go in the models folder, it's use to decode the data from database query and store it as a object
-
-## dto
-it's similar with models but the differents are:
-<ul>
-    <li>don't define dto in repository, the repository is the responsibility of the models</li>
-    <li>dto is usefull to get your request body, request params, or response your data to your rest api</li>
-</ul>
-example you have message.go as models and its models called as messages, and messages_response.go as the dto and its dto called as MessageResponseBody. the repositories will return the data as Messages and the services will return it too, but if you want to sent your data as a json response, you should have used the MessageResponseBody to response it.
-
-## Handlers
-Handlers usefull to encode raw body, query params, make a response to client. note: make the controller based on the protocols eg: HTTP Handlers, RabbiqMQ controller, Grpc controller.
-and it also useful to convert models to dto for responding to the data
-
-## Service
-Service contains all of business logic, like creating a messages, creating a users, validation products, validation for products quantity, run you transaction. 
-note that if you have relations based on the modules example you have a product modules with order modules, when user make an order then product quantity must be reduced based on order quantity, so you must make a transaction in service
-
-## Repository
-Repository contains all of database query
-
-# Storage
-Storage store the storage layer, such as database, database stored in storage/db folder. If you use mysql, then just create a file called mysql.go and you must define your mysql modules here (it's a dependency).
-If you using redis in your project, create a cached folder then create a file called redis.go, and make your modules again. all examples was attached in this repo
+| Category           | Endpoint                                           | Description                                |
+|--------------------|----------------------------------------------------|--------------------------------------------|
+| Product            | GET /products                                      | Get all products.                          |
+|                    | GET /products/{category}                           | Get products by category.                  |
+|                    | POST /products                                     | Add a new product (admin only).            |
+|                    | PUT /products/{id}                                 | Update a product (admin only).             |
+|                    | DELETE /products/{id}                              | Delete a product (admin only).             |
+| Customer           | POST /register                                     | Register a new customer.                   |
+|                    | POST /login                                        | Login a customer.                          |
+| Cart               | GET /carts/{customer_id}                          | Get customer's cart.                       |
+|                    | POST /carts/{customer_id}/items/{product_id}      | Add a product to the cart.                 |
+|                    | DELETE /carts/{customer_id}/items/{cart_item_id}  | Remove a product from the cart.            |
+| Order              | POST /orders/{customer_id}                         | Create a new order.                        |
+|                    | GET /orders/{customer_id}                          | Get customer's orders.                     |
 
 
-## License
-This package is licensed under MIT license. See LICENSE for details.
+## Getting Started 🚀
+
+To get started with Go-Commerce, follow these steps:
+
+1. Clone this repository.
+2. Set up your database according to the provided ERD.
+3. Configure your environment variables:
+
+```plaintext
+APP_PORT=6000
+DB_HOST=ep-lingering-resonance-a1749ljv.ap-southeast-1.aws.neon.tech
+DB_NAME=mooi
+DB_USERNAME=mooi_owner
+DB_PASSWORD=LJADBRjX3Yu4
+JWT_SECRET=LJADBRjX3Yu4asdaw312nj1d9wh10sla273A
