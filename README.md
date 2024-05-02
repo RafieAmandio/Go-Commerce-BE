@@ -4,6 +4,7 @@ Go-Commerce is a simple backend solution for commerce operations, designed to em
 
 ## Entity-Relationship Diagram (ERD) 📊
 
+<img src="https://github.com/RafieAmandio/Go-Commerce-BE/assets/88525718/32a9c44a-e60c-444a-9030-1bd00ad04e72" alt="mermaid-diagram-2024-05-02-194659" style="width:80%;">
 
 | Entity       | Attributes                              |
 |--------------|-----------------------------------------|
