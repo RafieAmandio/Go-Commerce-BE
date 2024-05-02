@@ -2,9 +2,12 @@ package server
 
 import (
 	"mooi/library/middleware"
-	"mooi/src/customer/handlers"
-	"mooi/src/customer/repositories"
-	"mooi/src/customer/services"
+	customerHandlers "mooi/src/customer/handlers"
+	customerRepositories "mooi/src/customer/repositories"
+	customerServices "mooi/src/customer/services"
+	productHandlers "mooi/src/product/handlers"
+	productRepositories "mooi/src/product/repositories"
+	productServices "mooi/src/product/services"
 )
 
 func (s *Server) routes() {
@@ -13,21 +16,31 @@ func (s *Server) routes() {
 	s.Router.Use(middleware.LoggingMiddleware)
 
 	// Initialize customer repository
-	customerRepository := repositories.NewCustomerRepository(s.Database)
+	customerRepository := customerRepositories.NewCustomerRepository(s.Database)
 	// Initialize customer service with the repository
-	customerService := services.NewCustomerService(customerRepository)
+	customerService := customerServices.NewCustomerService(customerRepository)
 	// Initialize customer handlers with the service
-	customerHandlers := handlers.NewCustomerHandler(customerService)
+	customerHandler := customerHandlers.NewCustomerHandler(customerService)
 
 	// Define customer routes
-	s.Router.HandleFunc("/register", customerHandlers.RegisterCustomer).Methods("POST")
-	s.Router.HandleFunc("/login", customerHandlers.LoginCustomer).Methods("POST")
+	s.Router.HandleFunc("/register", customerHandler.RegisterCustomer).Methods("POST")
+	s.Router.HandleFunc("/login", customerHandler.LoginCustomer).Methods("POST")
 
-	// // define extra routes
-	// exampleRepository := repositories.NewExampleRepostiory(s.Database)
-	// exampleService := services.NewExampleService(exampleRepository)
-	// exampleHandlers := handlers.NewHttpHandler(exampleService)
-	// // setup example routes
-	// s.Router.HandleFunc("/", exampleHandlers.GetExample)
-	// s.Router.HandleFunc("/test", exampleHandlers.GetExample)
+	// Initialize product repository
+	productRepository := productRepositories.NewProductRepository(s.Database)
+	// Initialize product service with the repository
+	productService := productServices.NewProductService(productRepository)
+	// Initialize product handlers with the service
+	productHandler := productHandlers.NewProductHandler(productService)
+
+	// Define product routes
+	s.Router.HandleFunc("/products", productHandler.GetAllProducts).Methods("GET")
+	s.Router.HandleFunc("/products/{category}", productHandler.GetProductsByCategory).Methods("GET")
+	s.Router.HandleFunc("/products", productHandler.AddProduct).Methods("POST")
+	s.Router.HandleFunc("/products/{id}", productHandler.UpdateProduct).Methods("PUT")
+	s.Router.HandleFunc("/products/{id}", productHandler.DeleteProduct).Methods("DELETE")
+
+	
 }
+
+
