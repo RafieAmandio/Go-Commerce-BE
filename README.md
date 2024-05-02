@@ -4,7 +4,7 @@ Go-Commerce is a simple backend solution for commerce operations, designed to em
 
 ## Entity-Relationship Diagram (ERD) 📊
 
-```plaintext
+
 | Entity       | Attributes                              |
 |--------------|-----------------------------------------|
 | Product      | product_id, name, category, price, quantity |
@@ -47,3 +47,4 @@ DB_NAME=mooi
 DB_USERNAME=mooi_owner
 DB_PASSWORD=LJADBRjX3Yu4
 JWT_SECRET=LJADBRjX3Yu4asdaw312nj1d9wh10sla273A
+```
