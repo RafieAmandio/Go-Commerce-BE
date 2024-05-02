@@ -2,6 +2,7 @@ package handlers
 
 import (
 	"encoding/json"
+	"log"
 	"mooi/library/response"
 	"mooi/src/example/dto"
 	"mooi/src/example/services"
@@ -26,6 +27,7 @@ func (handler *exampleHandlers) GetExample(rw http.ResponseWriter, r *http.Reque
 
 	var exampleRequest dto.ExampleRequestBody
 	err := json.NewDecoder(r.Body).Decode(&exampleRequest)
+	log.Println("Success to create log path")
 	if err != nil {
 		//http.Error(rw, "invalid request body", http.StatusBadRequest)
 		response.JsonResponse(rw, http.StatusBadRequest, "invalid request", nil)

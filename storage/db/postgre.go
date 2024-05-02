@@ -1,35 +1,41 @@
 package db
 
 import (
-	"context"
+	"database/sql"
 	"log"
 	"mooi/config"
 
-	"github.com/jackc/pgx/v4"
+	_ "github.com/lib/pq"
 )
 
 type PostgreSQLDB interface {
-	ConnectDatabase() *pgx.Conn
+	ConnectDatabase() *sql.DB
 }
 
 type postgresDB struct {
-	conn *pgx.Conn
+	db *sql.DB
 }
 
 func NewPostgreSQLClient() PostgreSQLDB {
 	dbConfig := config.Get()
 
-	conn, err := pgx.Connect(context.Background(), dbConfig.PostgreSQLConnectionString())
+	db, err := sql.Open("postgres", dbConfig.PostgreSQLConnectionString())
 	if err != nil {
 		log.Fatal("error while creating new PostgreSQL connection. error: ", err)
 		return nil
 	}
 
+	err = db.Ping()
+	if err != nil {
+		log.Fatal("error while pinging the database. error: ", err)
+		return nil
+	}
+
 	return &postgresDB{
-		conn: conn,
+		db: db,
 	}
 }
 
-func (p *postgresDB) ConnectDatabase() *pgx.Conn {
-	return p.conn
+func (p *postgresDB) ConnectDatabase() *sql.DB {
+	return p.db
 }

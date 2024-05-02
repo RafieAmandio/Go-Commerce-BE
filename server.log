@@ -1,0 +1,44 @@
+[36mINFO[0m[2024-05-02T15:19:37+07:00]D:/Intern/MOOI-Starter/server/server.go:45 mooi/server.(*Server).StartHttpServer() Server running on port: 6000                 
+[36mINFO[0m[2024-05-02T15:29:42+07:00]D:/Intern/MOOI-Starter/server/server.go:45 mooi/server.(*Server).StartHttpServer() Server running on port: 6000                 
+[36mINFO[0m[2024-05-02T15:48:33+07:00]D:/Intern/MOOI-Starter/server/server.go:45 mooi/server.(*Server).StartHttpServer() Server running on port: 6000                 
+[36mINFO[0m[2024-05-02T15:49:36+07:00]D:/Intern/MOOI-Starter/library/middleware/logging.go:14 mooi/library/middleware.LoggingMiddleware.func1() request completed in 0s                      
+[36mINFO[0m[2024-05-02T15:49:50+07:00]D:/Intern/MOOI-Starter/library/middleware/logging.go:14 mooi/library/middleware.LoggingMiddleware.func1() request completed in 0s                      
+[36mINFO[0m[2024-05-02T15:50:12+07:00]D:/Intern/MOOI-Starter/library/middleware/logging.go:14 mooi/library/middleware.LoggingMiddleware.func1() request completed in 400.6µs                 
+[36mINFO[0m[2024-05-02T15:55:06+07:00]D:/Intern/MOOI-Starter/library/middleware/logging.go:14 mooi/library/middleware.LoggingMiddleware.func1() request completed in 0s                      
+[36mINFO[0m[2024-05-02T15:55:19+07:00]D:/Intern/MOOI-Starter/server/server.go:45 mooi/server.(*Server).StartHttpServer() Server running on port: 6000                 
+[36mINFO[0m[2024-05-02T15:55:28+07:00]D:/Intern/MOOI-Starter/library/middleware/logging.go:14 mooi/library/middleware.LoggingMiddleware.func1() request completed in 0s                      
+[36mINFO[0m[2024-05-02T15:56:03+07:00]D:/Intern/MOOI-Starter/server/server.go:45 mooi/server.(*Server).StartHttpServer() Server running on port: 6000                 
+[36mINFO[0m[2024-05-02T15:56:11+07:00]D:/Intern/MOOI-Starter/library/middleware/logging.go:14 mooi/library/middleware.LoggingMiddleware.func1() request completed in 0s                      
+[36mINFO[0m[2024-05-02T15:56:14+07:00]D:/Intern/MOOI-Starter/library/middleware/logging.go:14 mooi/library/middleware.LoggingMiddleware.func1() request completed in 0s                      
+[36mINFO[0m[2024-05-02T16:05:32+07:00]D:/Intern/MOOI-Starter/server/server.go:45 mooi/server.(*Server).StartHttpServer() Server running on port: 6000                 
+[36mINFO[0m[2024-05-02T16:06:59+07:00]D:/Intern/MOOI-Starter/server/server.go:45 mooi/server.(*Server).StartHttpServer() Server running on port: 6000                 
+[36mINFO[0m[2024-05-02T16:07:20+07:00]D:/Intern/MOOI-Starter/library/middleware/logging.go:14 mooi/library/middleware.LoggingMiddleware.func1() request completed in 676.5µs                 
+[36mINFO[0m[2024-05-02T16:07:28+07:00]D:/Intern/MOOI-Starter/library/middleware/logging.go:14 mooi/library/middleware.LoggingMiddleware.func1() request completed in 221.8µs                 
+[36mINFO[0m[2024-05-02T16:07:29+07:00]D:/Intern/MOOI-Starter/library/middleware/logging.go:14 mooi/library/middleware.LoggingMiddleware.func1() request completed in 603.4µs                 
+[36mINFO[0m[2024-05-02T16:07:30+07:00]D:/Intern/MOOI-Starter/library/middleware/logging.go:14 mooi/library/middleware.LoggingMiddleware.func1() request completed in 628.6µs                 
+[36mINFO[0m[2024-05-02T16:08:28+07:00]D:/Intern/MOOI-Starter/server/server.go:45 mooi/server.(*Server).StartHttpServer() Server running on port: 6000                 
+[36mINFO[0m[2024-05-02T16:08:32+07:00]D:/Intern/MOOI-Starter/library/middleware/logging.go:14 mooi/library/middleware.LoggingMiddleware.func1() request completed in 0s                      
+[36mINFO[0m[2024-05-02T16:08:36+07:00]D:/Intern/MOOI-Starter/library/middleware/logging.go:14 mooi/library/middleware.LoggingMiddleware.func1() request completed in 909.7µs                 
+[36mINFO[0m[2024-05-02T18:03:07+07:00]D:/Intern/MOOI-Starter/server/server.go:45 mooi/server.(*Server).StartHttpServer() Server running on port: 6000                 
+[36mINFO[0m[2024-05-02T18:04:42+07:00]D:/Intern/MOOI-Starter/library/middleware/logging.go:14 mooi/library/middleware.LoggingMiddleware.func1() request completed in 452.1µs                 
+[36mINFO[0m[2024-05-02T18:05:13+07:00]D:/Intern/MOOI-Starter/library/middleware/logging.go:14 mooi/library/middleware.LoggingMiddleware.func1() request completed in 426.2µs                 
+[36mINFO[0m[2024-05-02T18:05:47+07:00]D:/Intern/MOOI-Starter/server/server.go:45 mooi/server.(*Server).StartHttpServer() Server running on port: 6000                 
+[36mINFO[0m[2024-05-02T18:05:52+07:00]D:/Intern/MOOI-Starter/library/middleware/logging.go:14 mooi/library/middleware.LoggingMiddleware.func1() request completed in 549.6µs                 
+[36mINFO[0m[2024-05-02T18:06:14+07:00]D:/Intern/MOOI-Starter/server/server.go:45 mooi/server.(*Server).StartHttpServer() Server running on port: 6000                 
+[36mINFO[0m[2024-05-02T18:06:21+07:00]D:/Intern/MOOI-Starter/library/middleware/logging.go:14 mooi/library/middleware.LoggingMiddleware.func1() request completed in 536µs                   
+[36mINFO[0m[2024-05-02T18:07:32+07:00]D:/Intern/MOOI-Starter/server/server.go:45 mooi/server.(*Server).StartHttpServer() Server running on port: 6000                 
+[36mINFO[0m[2024-05-02T18:08:07+07:00]D:/Intern/MOOI-Starter/server/server.go:45 mooi/server.(*Server).StartHttpServer() Server running on port: 6000                 
+[36mINFO[0m[2024-05-02T18:08:35+07:00]D:/Intern/MOOI-Starter/server/server.go:45 mooi/server.(*Server).StartHttpServer() Server running on port: 6000                 
+[36mINFO[0m[2024-05-02T18:08:45+07:00]D:/Intern/MOOI-Starter/library/middleware/logging.go:14 mooi/library/middleware.LoggingMiddleware.func1() request completed in 0s                      
+[36mINFO[0m[2024-05-02T18:11:01+07:00]D:/Intern/MOOI-Starter/server/server.go:45 mooi/server.(*Server).StartHttpServer() Server running on port: 6000                 
+[36mINFO[0m[2024-05-02T18:19:17+07:00]D:/Intern/MOOI-Starter/server/server.go:45 mooi/server.(*Server).StartHttpServer() Server running on port: 6000                 
+[36mINFO[0m[2024-05-02T18:19:23+07:00]D:/Intern/MOOI-Starter/library/middleware/logging.go:14 mooi/library/middleware.LoggingMiddleware.func1() request completed in 1.0636ms                
+[36mINFO[0m[2024-05-02T18:20:48+07:00]D:/Intern/MOOI-Starter/server/server.go:45 mooi/server.(*Server).StartHttpServer() Server running on port: 6000                 
+[36mINFO[0m[2024-05-02T18:21:00+07:00]D:/Intern/MOOI-Starter/library/middleware/logging.go:14 mooi/library/middleware.LoggingMiddleware.func1() request completed in 1.0491ms                
+[36mINFO[0m[2024-05-02T18:23:41+07:00]D:/Intern/MOOI-Starter/server/server.go:45 mooi/server.(*Server).StartHttpServer() Server running on port: 6000                 
+[36mINFO[0m[2024-05-02T18:24:59+07:00]D:/Intern/MOOI-Starter/server/server.go:45 mooi/server.(*Server).StartHttpServer() Server running on port: 6000                 
+[36mINFO[0m[2024-05-02T18:25:07+07:00]D:/Intern/MOOI-Starter/library/middleware/logging.go:14 mooi/library/middleware.LoggingMiddleware.func1() request completed in 507.4µs                 
+[36mINFO[0m[2024-05-02T18:26:28+07:00]D:/Intern/MOOI-Starter/server/server.go:45 mooi/server.(*Server).StartHttpServer() Server running on port: 6000                 
+[36mINFO[0m[2024-05-02T18:27:25+07:00]D:/Intern/MOOI-Starter/server/server.go:45 mooi/server.(*Server).StartHttpServer() Server running on port: 6000                 
+[36mINFO[0m[2024-05-02T18:29:17+07:00]D:/Intern/MOOI-Starter/server/server.go:45 mooi/server.(*Server).StartHttpServer() Server running on port: 6000                 
+[36mINFO[0m[2024-05-02T18:36:35+07:00]D:/Intern/MOOI-Starter/server/server.go:45 mooi/server.(*Server).StartHttpServer() Server running on port: 6000                 

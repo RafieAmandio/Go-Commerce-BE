@@ -86,8 +86,8 @@ func load() appConfig {
 }
 
 func (c appConfig) PostgreSQLConnectionString() string {
-	return fmt.Sprintf("host=%s port=%s dbname=%s user=%s password=%s",
-		c.DbHost, c.DbPort, c.DbName, c.DbUsername, c.DbPassword)
+	return fmt.Sprintf("host=%s dbname=%s user=%s password=%s sslmode=require",
+		c.DbHost, c.DbName, c.DbUsername, c.DbPassword)
 }
 
 func Get() appConfig {
